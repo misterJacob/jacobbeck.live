@@ -1,0 +1,102 @@
+@import "globals-slider";
+@import "header-slider";
+@import "container-slider";
+@import "responsive-slider";
+@import "contact-secondhand";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( to right, rgba($primaryColor, 0.2), rgba($secondaryColor, 0.1), rgba($primaryColor, 0.1));
+}
+
+a {
+    text-decoration: none;
+    color: $primaryColor;
+    font-size: 1.2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.footer-wrap {
+    width: 100%;
+    max-width: 600px;
+    height: 20vh;
+    position: relative;
+    bottom: 20vh;
+    left: 0;
+    right: 0;
+    right: auto;
+    .media {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 2;
+        a {
+            @include transition-ease;
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            .media-icon {
+                transform: rotate(-90deg);
+            }
+            &:hover {
+                color: $secondaryColor;
+            }
+        }
+        transform: translate(-3em, 5em) rotate(90deg);
+    }
+    footer {
+        font-size: 1rem;
+        position: absolute;
+        bottom: 0.3rem;
+        right: 1rem;
+        text-align: right;
+        padding: 1rem;
+        color: set-text-color($primaryColor);
+        font-family: "Poppins", sans-serif;
+        z-index: 2;
+        transform: translate(4em, 5em) rotate(-90deg);
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .footer-wrap{
+        .media{
+            transform: translate(1em,6em) rotate(0);
+            a {
+                @include transition-ease;
+                // padding: 0.5rem;
+                // font-size: 1.2rem;
+                .media-icon {
+                    transform: rotate(0);
+                }
+               
+            }
+    
+        }
+        footer{
+            transform: translate(1em, 6em) rotate(0deg);
+
+        }
+    }
+}
