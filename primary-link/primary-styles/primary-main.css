@@ -1121,8 +1121,8 @@ main .media a:hover > a {
 
 .wrap header .burger-wrap {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 2em;
+  right: 2em;
 }
 
 .wrap .container {
