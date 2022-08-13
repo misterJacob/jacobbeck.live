@@ -1,58 +1,159 @@
-.wrap {
-    max-width: 800px;
-    height: 100vh;
-    margin: auto;
+.projects-wrapper {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba($backgroundDarkLighter, 0.2);
+  .projects-header {
     display: flex;
-    flex-direction: column;
-    background-color: rgba($backgroundDarkLighter, 0.2);
-    header {
+    width: 100%;
+    height: 25vh;
+    background-color: rgba($backgroundLightHeader, 0.2);
+    .header-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($backgroundDarkLighter, 0.2);
+      .burger-wrap {
         position: relative;
-        .burger-wrap {
+        top: 10%;
+        right: -50%;
+        .burger {
+          width: 42px;
+          height: 6px;
+          background-color: black;
+          border-radius: 2px;
+          position: absolute;
+          top: 7px;
+          left: 50%;
+          transform: translateX(-50%);
+          &::after,
+          &::before {
+            content: "";
+            width: 42px;
+            height: 6px;
+            background-color: black;
+            border-radius: 2px;
             position: absolute;
-            top: 2em;
-            right: 2em;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          &::after {
+            top: -13px;
+          }
+          &::before {
+            top: 13px;
+          }
         }
-    }
-    .container {
-        width: 100%;
-        max-width: 800px;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        padding-top: 15vh;
+        &.open {
+          .burger {
+            background-color: rgba($primaryColor, 0.2);
+            &::after,
+            &::before {
+              background-color: rgba($primaryColor, 0.2);
+            }
+          }
+        }
+      }
+      .project-nav {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        .project {
-            width: 90%;
-            height: 75px;
+        width: 100%;
+        height: 100%;
+        .nav-menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 90%;
+          height: 100%;
+          margin: auto;
+          .nav-items {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            background: rgba($backgroundDarkLighter, 0.6);
-            border-radius: 10px;
-            margin-bottom: 5px;
-            .photo-wrap {
-                height: 50px;
-                width: 50px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 5px;
-                    &:hover {
-                        @include transition-ease;
-                        transform: scale(1.8);
-                    }
-                }
+            width: 100%;
+            height: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgba($primaryColor, 0.8);
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: rgba($primaryColor, 1);
             }
-            p {
-                font-size: 1.2rem;
+            &.active {
+              color: rgba($primaryColor, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .projects-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($backgroundLight, 0.2);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .project-card {
+      width: 100%;
+      height: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(9, 0, 40);
+      padding: 1rem;
+      border-radius: 5px;
+      color: vhite;
+        .project-item{
+            width:100%;
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+
+            .photo-wrap {
+              width: 80%;
+              height: 80%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: rgb(9, 0, 40);
+              padding: 1rem;
+              overflow: hidden;
+              position: relative;
+      
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.9);
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                transform: translate(-50%, -50%) scale(1.2);
+                }
+              }
             }
         }
     }
+  }
 }
 
-@include media-sd {}
+@include media-sd {
+  .burger-wrap {
+    display: none;
+  }
+}

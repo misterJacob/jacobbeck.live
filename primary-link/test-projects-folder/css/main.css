@@ -2,25 +2,14 @@ header {
   width: 100%;
   height: 40vh;
 }
-
 header .title {
   width: 100%;
   height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-
 header .title h1 {
   text-shadow: 2px 2px 2px red;
   text-align: center;
@@ -28,77 +17,53 @@ header .title h1 {
   margin-left: 0.2em;
   font-size: 1.2rem;
 }
-
 header .title .language {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 0 5px 5px 5px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 header .title .language a img {
   width: 1.5em;
 }
-
 header nav {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 30vh;
   grid-gap: 1rem;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: 0.5s ease-out;
+  justify-content: center;
   transition: 0.5s ease-out;
   padding-bottom: 1em;
 }
-
 header nav .item {
   z-index: 2000;
   grid-column: span 2 !important;
   border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 4px 2px rgba(255, 0, 0, 0.966);
-          box-shadow: 2px 2px 4px 2px rgba(255, 0, 0, 0.966);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 2px 2px 4px 2px rgba(255, 0, 0, 0.966);
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.694)), color-stop(50%, rgba(255, 255, 255, 0.646)));
   background: linear-gradient(rgba(255, 0, 0, 0.694), rgba(255, 255, 255, 0.646) 50%);
   text-transform: capitalize;
 }
-
 header nav .item a {
   padding: 0.15em 0.35em;
-  color: #fda8a8;
+  color: rgb(253, 168, 168);
   text-shadow: 2px 2px 2px rgba(126, 3, 3, 0.762);
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 800;
 }
-
 header nav .item.send-email {
   grid-column: span 3 !important;
 }
-
 header nav .item.call {
   grid-column: span 3 !important;
 }
-
 header .modal-email {
   width: 100vw;
   max-width: 600px;
@@ -107,63 +72,37 @@ header .modal-email {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 2em;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 2001;
 }
-
 header .modal-email.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .modal-email .modal-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90vw;
   height: 90vh;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   z-index: 100;
-  background: linear-gradient(45deg, black, rgba(255, 0, 0, 0.288));
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgba(255, 0, 0, 0.288));
   border-radius: 20px;
 }
-
 header .modal-email .modal-box .modal-body {
   width: 96%;
   height: 96%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.349), rgba(113, 81, 81, 0.336));
   border-radius: 20px;
 }
-
 header .modal-email .modal-box .modal-body h2 {
   color: whitesmoke;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.699);
@@ -176,20 +115,17 @@ header .modal-email .modal-box .modal-body h2 {
   border-radius: 1000px;
   text-align: center;
 }
-
 header .modal-email .modal-box .modal-body form {
   background-color: rgba(252, 184, 184, 0.075);
   height: 90%;
   width: 90%;
 }
-
 header .modal-email .modal-box .modal-body form .form-group {
   width: 100%;
   height: 20%;
   background-color: rgba(245, 245, 245, 0.108);
   position: relative;
 }
-
 header .modal-email .modal-box .modal-body form .form-group input,
 header .modal-email .modal-box .modal-body form .form-group textarea {
   width: 90%;
@@ -197,60 +133,49 @@ header .modal-email .modal-box .modal-body form .form-group textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 8px;
   border: none;
 }
-
 header .modal-email .modal-box .modal-body form .form-group input:focus,
 header .modal-email .modal-box .modal-body form .form-group textarea:focus {
   background: rgba(255, 255, 255, 0.142);
   color: whitesmoke;
 }
-
 header .modal-email .modal-box .modal-body form .form-group button {
   width: 50%;
   height: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   border-radius: 1000px;
 }
-
 header .modal-email .modal-box .modal-body form .form-group button:hover {
   border: 5px solid rgba(255, 0, 0, 0.163);
 }
-
 header .modal-email .modal-box .modal-body form .form-group span {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-
 header .modal-email .modal-box .modal-body form .form-group .icon {
   position: absolute;
   top: 50%;
   right: 10%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  background-color: white;
+  transform: translate(0, -50%);
+  background-color: rgb(255, 255, 255);
   color: rgba(255, 0, 0, 0.395);
   padding: 0.1em;
 }
-
 header .modal-email .modal-box .modal-body form .form-group .disabled {
   pointer-events: none;
   opacity: 0.7;
 }
-
 header .modal-email .modal-box .modal-body .modal-close {
   position: relative;
   top: -85vh;
 }
-
 header .modal-email .modal-box .modal-body .modal-close .btn {
   border-radius: 1000px;
   background-color: black;
@@ -263,46 +188,28 @@ main {
   min-height: 60vh;
   margin-left: auto;
   margin-right: auto;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.224)), to(rgba(255, 255, 255, 0.226))), url(../photo/mecedes.jpg) center;
   background: linear-gradient(rgba(255, 0, 0, 0.224), rgba(255, 255, 255, 0.226)), url(../photo/mecedes.jpg) center;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: none;
   margin: none;
   border-radius: 20px;
 }
-
 main .section {
   height: auto;
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.306), rgba(255, 0, 0, 0.068));
   border-radius: 20px;
-  -webkit-box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.156);
-          box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.156);
+  box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.156);
   color: whitesmoke;
   text-shadow: 1px -2px 1px rgba(44, 1, 1, 0.808), 1px -2px 1px rgba(73, 1, 1, 0.692);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 15vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 0.2em;
 }
-
 main .section h3 {
   font-weight: bold;
   color: whitesmoke;
@@ -314,20 +221,13 @@ main .section h3 {
 
 .modal-airport-transfer {
   z-index: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   overflow: auto;
   background: rgba(49, 49, 49, 0.925);
   color: whitesmoke;
@@ -335,48 +235,30 @@ main .section h3 {
   max-width: 100vh;
   width: 0vw;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .modal-airport-transfer.active {
   width: 100vw;
   max-width: 600px;
   opacity: 1;
   z-index: 3000;
 }
-
 .modal-airport-transfer .modal-wrap {
   width: 95%;
   height: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .modal-airport-transfer .modal-wrap h1 {
   font-size: 2.2rem;
   text-shadow: 2px 2px 2px red;
   text-align: center;
 }
-
 .modal-airport-transfer .modal-wrap .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .modal-airport-transfer .modal-wrap .container .img-wrap {
   width: 80vw;
   max-width: 400px;
@@ -386,39 +268,28 @@ main .section h3 {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .modal-airport-transfer .modal-wrap .container .img-wrap img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .modal-airport-transfer .modal-wrap .container .txt {
   text-shadow: 2px 2px 2px red;
   font-size: 1.2rem;
   width: 80%;
 }
-
 .modal-airport-transfer .modal-wrap .return-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding-top: 1.5em;
 }
-
 .modal-airport-transfer .modal-wrap .return-btn .btn {
   border: 2px solid grey;
   border-radius: 5px;
-  padding: 0.5em 1.0em;
+  padding: 0.5em 1em;
 }
-
 .modal-airport-transfer .modal-wrap .return-btn .btn a {
   font-size: 1.2rem;
   color: rgba(255, 0, 0, 0.456);
@@ -429,19 +300,16 @@ main .section h3 {
   max-width: 600px;
   min-height: 60vh;
 }
-
 .udflugter h3 {
   color: white;
   text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.592);
   text-align: center;
 }
-
 .udflugter p {
   color: white;
   text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.592);
   text-align: center;
 }
-
 .udflugter p span {
   font-size: 1.5rem;
   text-shadow: 1px 2px 3px rgba(194, 5, 5, 0.884);
@@ -449,14 +317,11 @@ main .section h3 {
   background: rgba(255, 255, 255, 0.63);
   border-radius: 1000px;
   padding: 0.2em;
-  -webkit-box-shadow: -2px -2px 8px 9px rgba(255, 0, 0, 0.205);
-          box-shadow: -2px -2px 8px 9px rgba(255, 0, 0, 0.205);
+  box-shadow: -2px -2px 8px 9px rgba(255, 0, 0, 0.205);
 }
-
 .udflugter p a {
   font-size: 1.1rem;
 }
-
 .udflugter p a:hover {
   color: rgba(255, 255, 255, 0.449);
   text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.592);
@@ -464,8 +329,7 @@ main .section h3 {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: none;
   margin: none;
 }
@@ -487,7 +351,6 @@ body {
   padding: none;
   background: linear-gradient(15deg, rgba(245, 245, 245, 0.76), rgba(250, 176, 176, 0.151));
 }
-
 body footer {
   height: 3vh;
   width: 90%;
@@ -497,26 +360,23 @@ body footer {
   padding: none;
   border-radius: 8px;
 }
-
 body footer small {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 90%;
   text-align: center;
 }
 
 @media only screen and (max-width: 300px) {
   header .title h1 {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
   header nav .item a {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
-
 @media only screen and (max-height: 658px) and (min-height: 462px) {
   header nav {
     height: 25vh;
@@ -526,11 +386,8 @@ body footer small {
     overflow: auto;
   }
 }
-
 @media only screen and (max-height: 461px) {
   header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-top: 10vh;
   }
@@ -540,5 +397,4 @@ body footer small {
   main {
     overflow: auto;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
