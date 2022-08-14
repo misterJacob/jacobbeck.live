@@ -16,7 +16,6 @@
 
 <body>
     <div class="projects-wrapper">
-
         <header class="projects-header">
 
             <div class="header-wrap">
@@ -49,11 +48,9 @@
 
             </div>
         </header>
-
-
         <div class="projects-container">
             <div class="project-card">
-                <a class="project-item" href="https://jacob-beck.com/">
+                <a class="project-item" href="https://jacob-beck.com/" target="_blanc">
                     <div class="photo-wrap">
                         <img src="./photos/my-web-react.png" alt="My web site in react">
                     </div>
@@ -61,18 +58,27 @@
                 </a>
             </div>
            <div class="project-card">
-             <a class="project-item" href="./test-projects-folder/taxi-index.html">
+             <a class="project-item" href="./test-projects-folder/taxi-index.html" target="_blanc">
                  <div class="photo-wrap">
                      <img src="./test-projects-folder/photo/myTaxi.jpg" alt="">
                  </div>
                  <p>Taxi Driver Maspalomas</p>
-             </a>
-           </div>
+                </a>
+            </div>
+            <div class="display-items-wrap">
+                <h3>See projects in Display</h3>
+
+             <div class="items">
+                   <a class="item" href="https://jacob-beck.com/" target="iframe-project">My web site in react</a>
+                   <a class="item" href="./test-projects-folder/taxi-index.html" target="iframe-project">Taxi Driver Maspalomas</a>
+                
+             </div>
+            </div>
         </div>
-
-
-
-
+        <div class="display-container">
+            <h2>Project Display</h2>
+            <iframe class="iframe" src="https://jacob-beck.com/" name="iframe-project"  ></iframe>
+        </div>
     </div>
 
 

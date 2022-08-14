@@ -860,11 +860,12 @@ main .media a:hover > a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(9, 0, 40);
+  background-color: rgba(36, 36, 36, 0.276);
   padding: 1rem;
   border-radius: 5px;
   color: vhite;
   transition: all 0.3s ease-in-out;
+  margin-top: 10px;
 }
 .projects-wrapper .projects-container .project-card:hover {
   opacity: 0.8;
@@ -909,6 +910,56 @@ main .media a:hover > a {
   letter-spacing: 2px;
   text-align: center;
   margin-top: 10px;
+}
+.projects-wrapper .projects-container .display-items-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  grid-column: 1/3;
+  height: 15vh;
+}
+.projects-wrapper .projects-container .display-items-wrap h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(35, 35, 1);
+  padding: 1rem;
+}
+.projects-wrapper .projects-container .display-items-wrap a {
+  color: darkslategray;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 0.2rem;
+  background: rgba(39, 0, 84, 0.266);
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 1rem;
+  border-radius: 1000px;
+}
+.projects-wrapper .display-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.725);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.projects-wrapper .display-container h2 {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%);
+  color: aliceblue;
+}
+.projects-wrapper .display-container .iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 5px solid grey;
 }
 
 @media screen and (min-width: 600px) {
