@@ -43,10 +43,9 @@ li {
     max-width: 600px;
     height: 20vh;
     position: relative;
-    bottom: 20vh;
+    bottom: 5vh;
     left: 0;
-    right: 0;
-    right: auto;
+    // transform: translateY(-50%);
     .media {
         position: absolute;
         bottom: 1rem;
