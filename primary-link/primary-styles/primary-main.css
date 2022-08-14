@@ -840,9 +840,10 @@ main .media a:hover > a {
 }
 .projects-wrapper .projects-header .header-wrap .project-nav .nav-menu .nav-items:hover {
   color: #292929;
+  opacity: 0.5;
 }
 .projects-wrapper .projects-header .header-wrap .project-nav .nav-menu .nav-items.active {
-  color: #292929;
+  display: none;
 }
 .projects-wrapper .projects-container {
   width: 100%;
@@ -863,6 +864,13 @@ main .media a:hover > a {
   padding: 1rem;
   border-radius: 5px;
   color: vhite;
+  transition: all 0.3s ease-in-out;
+}
+.projects-wrapper .projects-container .project-card:hover {
+  opacity: 0.8;
+}
+.projects-wrapper .projects-container .project-card:hover .project-item .photo-wrap img {
+  transform: translate(-50%, -50%) scale(1.01);
 }
 .projects-wrapper .projects-container .project-card .project-item {
   width: 100%;
@@ -881,6 +889,7 @@ main .media a:hover > a {
   background-color: rgb(9, 0, 40);
   padding: 1rem;
   overflow: hidden;
+  border-radius: 5px;
   position: relative;
 }
 .projects-wrapper .projects-container .project-card .project-item .photo-wrap img {
@@ -888,15 +897,18 @@ main .media a:hover > a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
-.projects-wrapper .projects-container .project-card .project-item .photo-wrap img:hover {
-  transform: translate(-50%, -50%) scale(1.2);
+.projects-wrapper .projects-container .project-card .project-item p {
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 600px) {

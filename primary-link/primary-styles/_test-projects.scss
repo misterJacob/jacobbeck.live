@@ -86,9 +86,10 @@
 
             &:hover {
               color: rgba($primaryColor, 1);
+              opacity: 0.5;
             }
             &.active {
-              color: rgba($primaryColor, 1);
+              display: none;
             }
           }
         }
@@ -113,41 +114,56 @@
       padding: 1rem;
       border-radius: 5px;
       color: vhite;
-        .project-item{
-            width:100%;
-            height:100%;
-            display:flex;
-            flex-direction: column;
-            justify-content:center;
-            align-items:center;
+      transition: all 0.3s ease-in-out;
 
-            .photo-wrap {
-              width: 80%;
-              height: 80%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background-color: rgb(9, 0, 40);
-              padding: 1rem;
-              overflow: hidden;
-              position: relative;
-      
-              img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 5px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0.9);
-                transition: all 0.3s ease-in-out;
-                &:hover {
-                transform: translate(-50%, -50%) scale(1.2);
-                }
-              }
-            }
+      &:hover {
+        opacity: 0.8;
+        .project-item .photo-wrap img {
+          transform: translate(-50%, -50%) scale(1.01);
         }
+      }
+      .project-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .photo-wrap {
+          width: 80%;
+          height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(9, 0, 40);
+          padding: 1rem;
+          overflow: hidden;
+          border-radius: 5px;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            // &:hover {
+            //   transform: translate(-50%, -50%) scale(1.01);
+            // }
+          }
+        }
+        p {
+          color: white;
+          letter-spacing: 2px;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
     }
   }
 }
